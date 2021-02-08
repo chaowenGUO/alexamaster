@@ -1,4 +1,4 @@
-import aiohttp, asyncio
+import aiohttp, asyncio, bs4
     
 async def f():
     async with aiohttp.ClientSession() as session:
