@@ -9,5 +9,5 @@ jobs:
               python-version: '3.x'
         - run: |
               google-chrome --headless --disable-gpu --dump-dom https://www.chromestatus.com/
-              pip install aiohttp beautifulsoup4 selenium chromedriver-binary-auto
+              pip install aiohttp beautifulsoup4
               python job.py
