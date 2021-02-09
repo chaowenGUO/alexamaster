@@ -1,7 +1,7 @@
-import cfscrape
+import cloudscraper
 
-scraper = cfscrape.create_scraper()
-print(scraper.get('https://v2ex.com/go/jobs').content)
+scraper = cloudscraper.create_scraper()
+print(scraper.get('https://v2ex.com/go/jobs').text)
 
 import aiohttp, asyncio, bs4
     
