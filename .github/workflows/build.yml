@@ -7,9 +7,6 @@ jobs:
         - uses: actions/setup-python@main
           with:
               python-version: '3.x'
-        - uses: actions/setup-node@main
-          with:
-              node-version: '14.x'
         - run: |     
-              pip install cloudscraper aiohttp beautifulsoup4
+              pip install aiohttp beautifulsoup4
               python job.py
