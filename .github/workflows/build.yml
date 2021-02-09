@@ -8,6 +8,5 @@ jobs:
           with:
               python-version: '3.x'
         - run: |
-              google-chrome --version
               pip install aiohttp beautifulsoup4 selenium chromedriver-binary-auto
               python job.py
