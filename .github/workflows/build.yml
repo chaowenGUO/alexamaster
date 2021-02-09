@@ -11,5 +11,5 @@ jobs:
           with:
               node-version: '14.x'
         - run: |     
-              pip install cfscrape aiohttp beautifulsoup4
+              pip install cloudscraper aiohttp beautifulsoup4
               python job.py
