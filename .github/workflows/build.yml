@@ -8,5 +8,5 @@ jobs:
           with:
               python-version: '3.x'
         - run: |     
-              pip install aiohttp beautifulsoup4 PyExecJS requests pyquery termcolor   
+              pip install aiohttp beautifulsoup4 PyExecJS requests pyquery termcolor click  
               python job.py
