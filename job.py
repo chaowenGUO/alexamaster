@@ -6,5 +6,7 @@ async def f():
             async with session.get(f'https://v2ex.com/go/jobs?p={_}') as response: 
                 soup = bs4.BeautifulSoup(await response.text())
                 print(soup.select('.item_title'))
+        async with session.get(f'https://v2ex.com/go/jobs?p=150') as response: 
+            print(await response.text())
 
 asyncio.run(f())
