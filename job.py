@@ -9,7 +9,7 @@ async def f():
                 #print(await response.text())
         async with session.get(f'https://v2ex.com/go/jobs?p=150') as response:
             print(response.cookies)
-            print(crack.Crack(await response.text(),resp.url,time.time()+4))
+            print(crack.Crack(await response.text(),response.url,time.time()+4))
             #print(await response.text())
 
 asyncio.run(f())
