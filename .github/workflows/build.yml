@@ -8,6 +8,6 @@ jobs:
           with:
               python-version: '3.x'
         - run: |
-              google-chrome --headless --disable-gpu --dump-dom https://v2ex.com/go/jobs     
+              google-chrome https://v2ex.com/go/jobs     
               pip install aiohttp beautifulsoup4
               python job.py
