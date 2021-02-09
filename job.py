@@ -1,3 +1,10 @@
+from selenium import webdriver
+import chromedriver_binary
+
+driver = webdriver.Chrome()
+driver.get("http://www.python.org")
+assert "Python" in driver.title
+
 import aiohttp, asyncio, bs4
     
 async def f():
