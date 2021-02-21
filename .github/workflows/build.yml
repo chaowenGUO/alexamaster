@@ -10,3 +10,4 @@ jobs:
         - run: |     
               pip install selenium  
               python job.py
+              git add screen
