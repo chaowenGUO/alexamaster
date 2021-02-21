@@ -11,4 +11,7 @@ jobs:
               pip install selenium  
               python job.py
               git add screenshot.png
-              git
+              git config user.name dummy
+              git config user.email dummy
+              git commit --allow-empty-message -m ''
+              git push
