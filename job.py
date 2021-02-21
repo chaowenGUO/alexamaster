@@ -1,15 +1,10 @@
-import aiohttp, asyncio, bs4, crack, time
-    
-async def f():
-    async with aiohttp.ClientSession() as session:
-        #for _ in range(1, 2): 
-            #async with session.get(f'https://v2ex.com/go/jobs?p={_}') as response: 
-                #soup = bs4.BeautifulSoup(await response.text())
-                #print(soup.select('.item_title'))
-                #print(await response.text())
-        async with session.get(f'https://v2ex.com/go/jobs?p=150') as response:
-            print(response.cookies)
-            print(crack.Crack(await response.text(),str(response.url),time.time()+4))
-            #print(await response.text())
+from selenium import webdriver
 
-asyncio.run(f())
+options = webdriver.ChromeOptions()
+options.headless = True
+driver = webdriver.Chrome(chrome_options=options)
+
+driver.get('https://python.org')
+driver.save_screenshot("screenshot.png")
+
+driver.close()
