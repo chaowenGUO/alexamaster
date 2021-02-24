@@ -6,7 +6,7 @@ jobs:
         runs-on: ubuntu-latest
         strategy:
             matrix:
-                node: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+                node: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         steps:
         - uses: actions/checkout@main
         - uses: actions/setup-python@main
