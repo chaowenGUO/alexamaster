@@ -9,4 +9,4 @@ jobs:
               python-version: '3.x'
         - run: |     
               pip install selenium  
-              python alexamaster.py
+              python main.py
