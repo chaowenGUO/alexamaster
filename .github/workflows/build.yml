@@ -13,5 +13,5 @@ jobs:
               #git add haha.png
               git config user.name dummy
               git config user.email dummy
-              git commit --allow-empty-message -m ''
+              #git commit --allow-empty-message -m ''
               git push
