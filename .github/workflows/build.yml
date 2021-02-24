@@ -10,7 +10,7 @@ jobs:
         - run: |     
               pip install selenium  
               python job.py
-              git add haha.png
+              #git add haha.png
               git config user.name dummy
               git config user.email dummy
               git commit --allow-empty-message -m ''
