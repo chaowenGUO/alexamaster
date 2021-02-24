@@ -1,5 +1,4 @@
-on: 
-    push:
+on:
     schedule:
     - cron: '0 */6 * * *'
 jobs:
@@ -10,7 +9,6 @@ jobs:
         - uses: actions/setup-python@main
           with:
               python-version: '3.x'
-        - run: | 
-              df -h /dev/shm
+        - run: |
               pip install selenium pynat
               python main.py
