@@ -5,7 +5,7 @@ on:
 jobs:
     money:
         runs-on: ubuntu-latest
-        if: github.event_name == 'schedule'
+        #if: github.event_name == 'schedule'
         strategy:
             matrix:
                 node: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
