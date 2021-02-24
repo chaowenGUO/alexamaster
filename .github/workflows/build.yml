@@ -3,8 +3,9 @@ on:
     schedule:
     - cron: '0 */6 * * *'
 jobs:
-    build:
+    money:
         runs-on: ubuntu-latest
+        if: github.event_name == 'schedule'
         strategy:
             matrix:
                 node: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -13,18 +14,18 @@ jobs:
         - uses: actions/setup-python@main
           with:
               python-version: '3.x'
+        - run: |
+              pip install selenium pynat
+              python main.py
+    build:
+        runs-on: ubuntu-latest
+        if: github.event_name == 'push'
         - uses: docker/login-action@master
-          if: github.event_name == 'push'
           with:
               username: chaowenguo
               password: ${{secrets.DOCKER}}
         - uses: docker/setup-buildx-action@master
-          if: github.event_name == 'push'
         - uses: docker/build-push-action@master
-          if: github.event_name == 'push'
           with:
               push: true
               tags: chaowenguo/selenium
-        - run: |
-              pip install selenium pynat
-              python main.py
