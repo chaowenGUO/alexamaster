@@ -1,9 +1,13 @@
 on:
+    push:
     schedule:
     - cron: '0 */6 * * *'
 jobs:
     build:
         runs-on: ubuntu-latest
+        strategy:
+            matrix:
+                node: [6, 8, 10]
         steps:
         - uses: actions/checkout@main
         - uses: actions/setup-python@main
