@@ -26,7 +26,7 @@ jobs:
           with:
               python-version: '3.x'
         - run: |
-              pip install selenium pillow aiohttp
+              pip install selenium pillow aiohttp pytesseract
               python good.py
               git add good.png
               git config user.name dummy
