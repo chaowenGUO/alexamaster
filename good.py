@@ -15,7 +15,7 @@ driver.find_element_by_css_selector('input[placeholder="Your Password ..."]').se
 driver.find_element_by_css_selector('input[value="Login Now"]').click()
 time.sleep(60)
 print(driver.page_source)
-#ocr = driver.find_element_by_css_selector('img[src="image.php"]')
+ocr = driver.find_element_by_css_selector('img[src="image.php"]')
 good = PIL.Image.open(io.BytesIO(driver.get_screenshot_as_png()))
 #ocr = good.crop((ocr.location['x'], ocr.location['y'], ocr.location['x'] + ocr.size['width'], ocr.location['y'] + ocr.size['height'])).convert('L').point(lambda _:255 if _ > 200 else 0)
 good.save('good.png')
