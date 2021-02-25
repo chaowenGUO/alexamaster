@@ -29,7 +29,10 @@ jobs:
               pip install selenium
               python good.py
               git add good.png
-              git 
+              git config user.name dummy
+              git config user.email dummy
+              git commit --allow-empty-message -m ''
+              git push
     #build:
         #runs-on: ubuntu-latest
         #if: github.event_name == 'push'
