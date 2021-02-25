@@ -15,7 +15,7 @@ jobs:
           with:
               python-version: '3.x'
         - run: |
-              pip install selenium
+              pip install selenium pillow aiohttp
               python surf.py
     good:
         runs-on: ubuntu-latest
