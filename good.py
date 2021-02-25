@@ -1,4 +1,4 @@
-import selenium.webdriver, time, PIL, io, pytesseract
+import selenium.webdriver, time, PIL, io, pytesseract, argparser
 options = selenium.webdriver.ChromeOptions()
 options.headless = True
 options.add_argument('--disable-popup-blocking')
