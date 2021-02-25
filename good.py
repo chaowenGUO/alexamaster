@@ -1,4 +1,4 @@
-import selenium.webdriver,time
+import selenium.webdriver, time, PIL, io, asyncio, aiohttp
 options = selenium.webdriver.ChromeOptions()
 options.headless = True
 options.add_argument('--disable-popup-blocking')
