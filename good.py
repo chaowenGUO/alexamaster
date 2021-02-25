@@ -4,6 +4,7 @@ options.headless = True
 options.add_argument('--disable-popup-blocking')
 options.add_argument('--incognito')
 options.add_argument('--no-first-run')
+options.add_argument('--start-maximized')
 driver = selenium.webdriver.Chrome(options=options)
 driver.maximize_window()
 driver.get('https://www.alexamaster.net/sec/login.php')
