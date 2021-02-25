@@ -29,7 +29,7 @@ jobs:
               sudo apt install --no-install-recommends tesseract-ocr
               pip install selenium aiohttp pytesseract
               python good.py
-              git add good.png
+              git add good.png ocr.png
               git config user.name dummy
               git config user.email dummy
               git commit --allow-empty-message -m ''
