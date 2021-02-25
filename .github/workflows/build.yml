@@ -16,7 +16,7 @@ jobs:
               python-version: '3.x'
         - run: |
               pip install selenium pynat
-              python main.py
+              python surf.py
     build:
         runs-on: ubuntu-latest
         if: github.event_name == 'push'
