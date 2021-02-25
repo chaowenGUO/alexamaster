@@ -1,5 +1,4 @@
-import selenium.webdriver, pynat
-print(pynat.get_ip_info(include_internal=True))
+import selenium.webdriver
 options = selenium.webdriver.ChromeOptions()
 options.headless = True
 options.add_argument('--disable-popup-blocking')
