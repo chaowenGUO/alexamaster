@@ -3,6 +3,7 @@ async def f():
     async with aiohttp.ClientSession() as session:
         async with session.get('https://www.alexamaster.net/sec/image.php') as response:
             a = PIL.Image.open(io.BytesIO(await response.content.read()))
+            a.convert('L')
             a.save('ocr.png')
             return pytesseract.image_to_string(a)   
 
