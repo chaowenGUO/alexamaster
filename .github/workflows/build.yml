@@ -27,7 +27,7 @@ jobs:
               python-version: '3.x'
         - run: |
               sudo apt install --no-install-recommends tesseract-ocr
-              pip install selenium aiohttp pytesseract
+              pip install selenium pytesseract
               python good.py
               git add good.png ocr.png
               git config user.name dummy
