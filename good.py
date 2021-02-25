@@ -1,4 +1,10 @@
 import selenium.webdriver, time, PIL, io, asyncio, aiohttp
+async def f():
+    async with aiohttp.ClientSession() as session:
+        async with session.get('https://www.alexamaster.net/sec/login.php') as response:
+            with io.BytesIO(await response.content.read()) as _:               
+asyncio.run(f())
+
 options = selenium.webdriver.ChromeOptions()
 options.headless = True
 options.add_argument('--disable-popup-blocking')
