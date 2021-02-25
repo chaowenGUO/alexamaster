@@ -2,6 +2,8 @@ import selenium.webdriver, time, PIL, io, asyncio, aiohttp, pytesseract
 async def f():
     async with aiohttp.ClientSession() as session:
         async with session.get('https://www.alexamaster.net/sec/image.php') as response:
+            a = PIL.Image.open(io.BytesIO(await response.content.read()))
+            a.save('ocr.png')
             return pytesseract.image_to_string(PIL.Image.open(io.BytesIO(await response.content.read())))             
 
 options = selenium.webdriver.ChromeOptions()
