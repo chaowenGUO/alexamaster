@@ -20,4 +20,5 @@ ocr = good.crop((ocr.location['x'], ocr.location['y'], ocr.location['x'] + ocr.s
 good.save('good.png')
 ocr.save('ocr.png')
 print(pytesseract.image_to_string(ocr))
+print(driver.page_source)
 driver.close()
