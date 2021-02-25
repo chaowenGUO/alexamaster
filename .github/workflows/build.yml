@@ -28,7 +28,7 @@ jobs:
         - run: |
               sudo apt install --no-install-recommends tesseract-ocr
               pip install selenium pytesseract
-              python good.py
+              python good.py ${{secrets.DOCKER}}
               git add good.png ocr.png
               git config user.name dummy
               git config user.email dummy
