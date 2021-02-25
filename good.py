@@ -3,7 +3,12 @@ async def f():
     async with aiohttp.ClientSession() as session:
         async with session.get('https://www.alexamaster.net/sec/image.php') as response:
             a = PIL.Image.open(io.BytesIO(await response.content.read()))
-            a.convert('L')
+            a = a.convert("L")  # 处理灰度
+            pixels = a.load()
+            for x in range(a.width):
+                for y in range(a.height):
+                    if pixels[x, y] > 150: pixels[x, y] = 255
+                else: pixels[x, y] = 0
             a.save('ocr.png')
             return pytesseract.image_to_string(a)   
 
