@@ -4,7 +4,7 @@ async def f():
         async with session.get('https://www.alexamaster.net/sec/image.php') as response:
             a = PIL.Image.open(io.BytesIO(await response.content.read()))
             a.save('ocr.png')
-            return pytesseract.image_to_string(PIL.Image.open(io.BytesIO(await response.content.read())))             
+            return pytesseract.image_to_string(a)   
 
 options = selenium.webdriver.ChromeOptions()
 options.headless = True
