@@ -26,8 +26,8 @@ jobs:
           with:
               python-version: '3.x'
         - run: |
-              sudo apt install tesseract-ocr
-              pip install selenium pillow aiohttp pytesseract
+              sudo apt install --no-install-recommends tesseract-ocr
+              pip install selenium aiohttp pytesseract
               python good.py
               git add good.png
               git config user.name dummy
