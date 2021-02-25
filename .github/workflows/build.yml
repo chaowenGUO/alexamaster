@@ -15,7 +15,7 @@ jobs:
           with:
               python-version: '3.x'
         - run: |
-              pip install selenium pynat
+              pip install selenium
               python surf.py
     build:
         runs-on: ubuntu-latest
