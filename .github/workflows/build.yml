@@ -26,9 +26,10 @@ jobs:
           with:
               python-version: '3.x'
         - run: |
-              sudo apt install --no-install-recommends tesseract-ocr
-              pip install selenium pytesseract
-              python good.py ${{secrets.PASSWORD}}
+              #sudo apt install --no-install-recommends tesseract-ocr
+              #pip install selenium pytesseract
+              #python good.py ${{secrets.PASSWORD}}
+              python surf.py
               git add good.png ocr.png
               git config user.name dummy
               git config user.email dummy
