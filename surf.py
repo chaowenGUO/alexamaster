@@ -10,6 +10,6 @@ driver.execute_script('globalThis.open("https://www.websyndic.com")')
 for _ in driver.window_handles:
     driver.switch_to.window(_)
     if 'websyndic' in driver.current_url: break
-driver.save_screenshot('a.png')
+driver.find_element_by_css_selector('')
 #while True: pass
 driver.quit()
