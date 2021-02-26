@@ -13,7 +13,7 @@ for _ in driver.window_handles:
     driver.switch_to.window(_)
     if 'websyndic' in driver.current_url: break
 driver.find_element_by_id('login_email').send_keys('chaowen.guo1@gmail.com')
-driver.find_element_by_id('login_passwd').send_keys
+driver.find_element_by_id('login_passwd').send_keys(parser.parse_args().password)
 driver.save_screenshot('a.png')
 #while True: pass
 driver.quit()
