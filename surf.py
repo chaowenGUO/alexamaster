@@ -9,9 +9,10 @@ driver.get('https://www.alexamaster.net/Master/157701')
 driver.execute_script('globalThis.open("https://www.websyndic.com")')
 #driver.switch_to_window(driver.window_handles[-1])
 #driver.save_screenshot('eb.png')
+print(type(driver.current_url))
 time.sleep(120)
 for _ in driver.window_handles:
     driver.switch_to.window(_)
-    driver.save_screenshot(str(driver.current_url))
+    driver.save_screenshot(str(driver.current_url) + '.png')
 #while True: pass
 driver.quit()
