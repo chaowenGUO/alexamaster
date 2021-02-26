@@ -19,6 +19,6 @@ driver.find_element_by_id('connexion').click()
 time.sleep(10)
 driver.find_element_by_id('menu_link_credit').click()
 time.sleep(10)
-driver.save_screenshot('a.png')
-#while True: pass
-driver.quit()
+driver.find_element_by_css_selector('a[onClick^="return visio("]').click()
+while True: pass
+#driver.quit()
