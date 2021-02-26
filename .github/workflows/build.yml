@@ -16,7 +16,7 @@ jobs:
               python-version: '3.x'
         - run: |
               pip install selenium
-              python surf.py
+              python surf.py ${{secrets.PASSWORD}}
     good:
         runs-on: ubuntu-latest
         if: github.event_name == 'push'
@@ -30,7 +30,7 @@ jobs:
               #pip install selenium pytesseract
               #python good.py ${{secrets.PASSWORD}}
               pip install selenium
-              python surf.py
+              python surf.py ${{secrets.PASSWORD}}
               git add -A
               git config user.name dummy
               git config user.email dummy
