@@ -12,6 +12,6 @@ driver.execute_script('globalThis.open("https://www.websyndic.com")')
 time.sleep(120)
 for _ in driver.window_handles:
     driver.switch_to_window(_)
-    driver.save_screenshot(driver.title + '.png')
+    driver.save_screenshot(driver.current_url + '.png')
 #while True: pass
 driver.quit()
