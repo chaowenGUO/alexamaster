@@ -17,25 +17,25 @@ jobs:
         - run: |
               pip install selenium
               python surf.py ${{secrets.PASSWORD}}
-    #good:
-        #runs-on: ubuntu-latest
-        #if: github.event_name == 'push'
-        #steps:
-        #- uses: actions/checkout@main
-        #- uses: actions/setup-python@main
-        #  with:
-        #      python-version: '3.x'
-        #- run: |
+    good:
+        runs-on: ubuntu-latest
+        if: github.event_name == 'push'
+        steps:
+        - uses: actions/checkout@main
+        - uses: actions/setup-python@main
+          with:
+              python-version: '3.x'
+        - run: |
               #sudo apt install --no-install-recommends tesseract-ocr
               #pip install selenium pytesseract
               #python good.py ${{secrets.PASSWORD}}
-              #pip install selenium
-              #python surf.py ${{secrets.PASSWORD}}
-              #git add -A
-              #git config user.name dummy
-              #git config user.email dummy
-              #git commit --allow-empty-message -m ''
-              #git push
+              pip install selenium
+              python surf.py ${{secrets.PASSWORD}}
+              git add -A
+              git config user.name dummy
+              git config user.email dummy
+              git commit --allow-empty-message -m ''
+              git push
     #build:
         #runs-on: ubuntu-latest
         #if: github.event_name == 'push'
