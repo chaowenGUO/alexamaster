@@ -12,6 +12,6 @@ driver.get('https://www.alexamaster.net/Master/157701')
 time.sleep(120)
 for _ in driver.window_handles:
     driver.switch_to.window(_)
-    driver.save_screenshot(driver.current_url + '.png')
+    driver.save_screenshot(driver.current_url)
 #while True: pass
 driver.quit()
