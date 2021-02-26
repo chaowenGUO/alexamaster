@@ -1,4 +1,4 @@
-import selenium.webdriver, argparse, time
+import selenium.webdriver, argparse
 parser = argparse.ArgumentParser() 
 parser.add_argument('password')
 options = selenium.webdriver.ChromeOptions()
