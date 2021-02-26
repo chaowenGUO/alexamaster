@@ -17,6 +17,8 @@ driver.find_element_by_id('login_email').send_keys('chaowen.guo1@gmail.com')
 driver.find_element_by_id('login_passwd').send_keys(parser.parse_args().password)
 driver.find_element_by_id('connexion').click()
 time.sleep(10)
+driver.find_element_by_id('menu_link_credit').click()
+time.sleep(10)
 driver.save_screenshot('a.png')
 #while True: pass
 driver.quit()
