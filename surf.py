@@ -1,4 +1,4 @@
-import selenium.webdriver, argparse
+import selenium.webdriver, argparse, time
 parser = argparse.ArgumentParser() 
 parser.add_argument('password')
 options = selenium.webdriver.ChromeOptions()
@@ -13,6 +13,7 @@ driver.execute_script('globalThis.open("https://chrome.google.com/webstore/detai
 for _ in driver.window_handles:
     driver.switch_to.window(_)
     if 'ebesucher' in driver.current_url: break
+time.sleep(10)
 #driver.find_element_by_id('connect_button').click()
 #driver.find_element_by_id('login_email').send_keys('chaowen.guo1@gmail.com')
 #driver.find_element_by_id('login_passwd').send_keys(parser.parse_args().password)
@@ -21,4 +22,5 @@ for _ in driver.window_handles:
 #driver.find_element_by_css_selector('a[onClick^="return visio("]').click()
 #while True: pass
 driver.save_screenshot('ha.png')
+print(driver.page_source)
 driver.quit()
