@@ -1,4 +1,4 @@
-import selenium.webdriver, argparse
+import selenium.webdriver, argparse, time
 parser = argparse.ArgumentParser() 
 parser.add_argument('password')
 options = selenium.webdriver.ChromeOptions()
@@ -14,6 +14,8 @@ for _ in driver.window_handles:
     if 'websyndic' in driver.current_url: break
 driver.find_element_by_id('login_email').send_keys('chaowen.guo1@gmail.com')
 driver.find_element_by_id('login_passwd').send_keys(parser.parse_args().password)
+driver.find_element_by_id('connexion').click()
+time.sleep(10)
 driver.save_screenshot('a.png')
 #while True: pass
 driver.quit()
