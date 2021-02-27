@@ -13,14 +13,14 @@ driver.execute_script('globalThis.open("https://chrome.google.com/webstore/detai
 for _ in driver.window_handles:
     driver.switch_to.window(_)
     if 'ebesucher' in driver.current_url: break
-time.sleep(10)
+#time.sleep(10)
 #driver.find_element_by_id('connect_button').click()
 #driver.find_element_by_id('login_email').send_keys('chaowen.guo1@gmail.com')
 #driver.find_element_by_id('login_passwd').send_keys(parser.parse_args().password)
 #driver.find_element_by_id('connexion').click()
 #driver.find_element_by_id('menu_link_credit').click()
 #driver.find_element_by_css_selector('a[onClick^="return visio("]').click()
-#while True: pass
-driver.save_screenshot('ha.png')
-pathlib.Path('ha.html').write_text(driver.page_source)
-driver.quit()
+while True: pass
+#driver.save_screenshot('ha.png')
+#pathlib.Path('ha.html').write_text(driver.page_source)
+#driver.quit()
