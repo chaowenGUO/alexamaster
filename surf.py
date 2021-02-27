@@ -13,7 +13,7 @@ driver.execute_script('globalThis.open("https://chrome.google.com/webstore/detai
 for _ in driver.window_handles:
     driver.switch_to.window(_)
     if 'ebesucher' in driver.current_url: break
-driver.execute_script('globalThis.scrollTo(document.body.scrollWidth,0)')
+driver.execute_script('globalThis.scrollTo(document.documentElement.scrollWidth,0)')
 time.sleep(120)
 #driver.find_element_by_id('connect_button').click()
 #driver.find_element_by_id('login_email').send_keys('chaowen.guo1@gmail.com')
