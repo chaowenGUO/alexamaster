@@ -30,8 +30,6 @@ jobs:
               #pip install selenium pytesseract
               #python good.py
               pip install selenium chrome_webstore_download
-              pip show chrome_webstore_download
-              python -m chrome_webstore_download -u https://chrome.google.com/webstore/detail/ebesucher-addon/agchmcconfdfcenopioeilpgjngelefk
               python new.py
               git add -A
               git config user.name dummy
