@@ -9,7 +9,7 @@ driver = selenium.webdriver.Chrome(options=options)
 driver.implicitly_wait(10)
 driver.get('https://www.alexamaster.net/Master/157701')
 driver.execute_script('globalThis.open("http://www.crunchingbaseteam.com/view.php?user=chaowenguo")')
-chrome_webstore_download.download('https://chrome.google.com/webstore/detail/ebesucher-addon/agchmcconfdfcenopioeilpgjngelefk', 'ebesucher.crx')
+chrome_webstore_download.download('https://chrome.google.com/webstore/detail/ebesucher-addon/agchmcconfdfcenopioeilpgjngelefk', 'ebesucher')
 #driver.execute_script('globalThis.open("")')
 #for _ in driver.window_handles:
 #    driver.switch_to.window(_)
