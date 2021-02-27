@@ -29,7 +29,6 @@ jobs:
               #sudo apt install --no-install-recommends tesseract-ocr
               #pip install selenium pytesseract
               #python good.py
-              mv crx/agchmcconfdfcenopioeilpgjngelefk_v1.0.28.4.crx .
               pip install selenium
               python new.py
               git add -A
