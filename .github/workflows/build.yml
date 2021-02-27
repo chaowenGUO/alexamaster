@@ -16,7 +16,7 @@ jobs:
               python-version: '3.x'
         - run: |
               pip install selenium
-              python surf.py ${{secrets.PASSWORD}}
+              python surf.py
     good:
         runs-on: ubuntu-latest
         if: github.event_name == 'push'
@@ -28,9 +28,10 @@ jobs:
         - run: |
               #sudo apt install --no-install-recommends tesseract-ocr
               #pip install selenium pytesseract
-              #python good.py ${{secrets.PASSWORD}}
-              pip install selenium
-              python surf.py ${{secrets.PASSWORD}}
+              #python good.py
+              pip install selenium pip3 install chrome_webstore_download
+              chrome_webstore_download -u
+              python surf.py
               git add -A
               git config user.name dummy
               git config user.email dummy
