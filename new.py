@@ -1,4 +1,4 @@
-import selenium.webdriver
+import selenium.webdriver, chrome_webstore_download
 options = selenium.webdriver.ChromeOptions()
 options.headless = True
 options.add_argument('--disable-popup-blocking')
@@ -9,7 +9,8 @@ driver = selenium.webdriver.Chrome(options=options)
 driver.implicitly_wait(10)
 driver.get('https://www.alexamaster.net/Master/157701')
 driver.execute_script('globalThis.open("http://www.crunchingbaseteam.com/view.php?user=chaowenguo")')
-#driver.execute_script('globalThis.open("https://chrome.google.com/webstore/detail/ebesucher-addon/agchmcconfdfcenopioeilpgjngelefk")')
+chrome_webstore_download.download('https://chrome.google.com/webstore/detail/ebesucher-addon/agchmcconfdfcenopioeilpgjngelefk', 'ebesucher.crx')
+#driver.execute_script('globalThis.open("")')
 #for _ in driver.window_handles:
 #    driver.switch_to.window(_)
 #    if 'ebesucher' in driver.current_url: break
