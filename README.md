@@ -1,1 +1,1 @@
-http://chrome-extension-downloader.com to download
+http://chrome-extension-downloader.com
