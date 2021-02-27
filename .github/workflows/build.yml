@@ -31,7 +31,7 @@ jobs:
               #python good.py
               pip install selenium chrome_webstore_download
               chrome_webstore_download -u https://chrome.google.com/webstore/detail/ebesucher-addon/agchmcconfdfcenopioeilpgjngelefk
-              python surf.py
+              python new.py
               git add -A
               git config user.name dummy
               git config user.email dummy
