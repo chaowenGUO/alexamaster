@@ -23,7 +23,7 @@ for _ in driver.window_handles:
 #driver.find_element_by_id('connexion').click()
 #driver.find_element_by_id('menu_link_credit').click()
 #driver.find_element_by_css_selector('a[onClick^="return visio("]').click()
-#while True: pass
-driver.save_screenshot('ha.png')
+while True: pass
+#driver.save_screenshot('ha.png')
 #pathlib.Path('ha.html').write_text(driver.page_source)
-driver.quit()
+#driver.quit()
