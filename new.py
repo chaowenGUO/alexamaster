@@ -1,5 +1,4 @@
-import selenium.webdriver, chrome_webstore_download
-chrome_webstore_download.download('https://chrome.google.com/webstore/detail/ebesucher-addon/agchmcconfdfcenopioeilpgjngelefk')
+import selenium.webdriver
 options = selenium.webdriver.ChromeOptions()
 options.headless = True
 options.add_argument('--disable-popup-blocking')
