@@ -1,10 +1,11 @@
-import selenium.webdriver
+import selenium.webdriver, chrome_webstore_download
+chrome_webstore_download.download('')
 options = selenium.webdriver.ChromeOptions()
 options.headless = True
 options.add_argument('--disable-popup-blocking')
 options.add_argument('--incognito')
 options.add_argument('--no-first-run')
-options.add_extension('agchmcconfdfcenopioeilpgjngelefk_v1.0.28.4.zip')
+#options.add_extension('agchmcconfdfcenopioeilpgjngelefk_v1.0.28.4.zip')
 #options.add_argument('--window-size=1960,1080')
 driver = selenium.webdriver.Chrome(options=options)
 driver.implicitly_wait(10)
