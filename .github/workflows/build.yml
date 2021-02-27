@@ -29,7 +29,7 @@ jobs:
               #sudo apt install --no-install-recommends tesseract-ocr
               #pip install selenium pytesseract
               #python good.py
-              pip install selenium chrome_webstore_download
+              pip install selenium
               python new.py
               git add -A
               git config user.name dummy
