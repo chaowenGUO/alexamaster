@@ -14,7 +14,7 @@ for _ in driver.window_handles:
     driver.switch_to.window(_)
     if 'ebesucher' in driver.current_url: break
 driver.execute_script('globalThis.scrollTo(1000,0)')
-time.sleep(10)
+time.sleep(60)
 #driver.find_element_by_id('connect_button').click()
 #driver.find_element_by_id('login_email').send_keys('chaowen.guo1@gmail.com')
 #driver.find_element_by_id('login_passwd').send_keys(parser.parse_args().password)
