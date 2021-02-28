@@ -1,4 +1,4 @@
-import selenium.webdriver, time, threading
+import selenium.webdriver, time, threading, pathlib
 options = selenium.webdriver.ChromeOptions()
 options.headless = True
 options.add_argument('--disable-popup-blocking')
@@ -16,7 +16,7 @@ for _ in driver.window_handles:
     if 'ebesucher' in driver.current_url: break
 driver.find_element_by_xpath('//*[text()="Surf now!"]/..').click()
 time.sleep(10)
-print(driver.page_source)
+pathlib.Path('index.html').write_text(driver.page_source)
 #time.sleep(threading.TIMEOUT_MAX)
 driver.save_screenshot('ha.png')
 driver.quit()
