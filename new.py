@@ -1,4 +1,4 @@
-import selenium.webdriver, selenium.webdriver.support.expected_conditions.EC, time, threading, pathlib
+import selenium.webdriver, selenium.webdriver.support.expected_conditions, time, threading, pathlib
 options = selenium.webdriver.ChromeOptions()
 options.headless = True
 options.add_argument('--disable-popup-blocking')
@@ -14,9 +14,9 @@ driver.execute_script('globalThis.open("http://www.ebesucher.com/surfbar/chaowen
 for _ in driver.window_handles:
     driver.switch_to.window(_)
     if 'ebesucher' in driver.current_url: break
-selenium.webdriver.support.ui.WebDriverWait(driver, 10).until(selenium.webdriver.support.expected_conditions.EC.element_to_be_clickable((selenium.webdriver.common.by.By.XPATH, '//*[text()="Surf now!"]/..'))).click()
+selenium.webdriver.support.ui.WebDriverWait(driver, 10).until(selenium.webdriver.support.expected_conditions.element_to_be_clickable((selenium.webdriver.common.by.By.XPATH, '//*[text()="Surf now!"]/..'))).click()
 driver.switch_to.frame(driver.find_elements_by_tag_name("iframe")[0])
-selenium.webdriver.support.ui.WebDriverWait(driver, 10).until(selenium.webdriver.support.expected_conditions.EC.element_to_be_clickable((selenium.webdriver.common.by.By.ID, "recaptcha-anchor")))
+selenium.webdriver.support.ui.WebDriverWait(driver, 10).until(selenium.webdriver.support.expected_conditions.element_to_be_clickable((selenium.webdriver.common.by.By.ID, "recaptcha-anchor")))
 #pathlib.Path('index.html').write_text(driver.page_source)
 #time.sleep(threading.TIMEOUT_MAX)
 time.sleep(100)
