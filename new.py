@@ -15,10 +15,14 @@ for _ in driver.window_handles:
     if 'ebesucher' in driver.current_url: break
 selenium.webdriver.support.ui.WebDriverWait(driver, 10).until(selenium.webdriver.support.expected_conditions.element_to_be_clickable((selenium.webdriver.common.by.By.XPATH, '//*[text()="Surf now!"]/..'))).click()
 selenium.webdriver.support.ui.WebDriverWait(driver, 10).until(selenium.webdriver.support.expected_conditions.frame_to_be_available_and_switch_to_it((selenium.webdriver.common.by.By.CSS_SELECTOR, 'iframe[src^="https://www.google.com/recaptcha/api2/anchor"]')))
+selenium.webdriver.support.ui.WebDriverWait(driver, 10).until(selenium.webdriver.support.expected_conditions.element_to_be_clickable((By.CSS_SELECTOR, "span#recaptcha-anchor"))).click()
+driver.switch_to.default_content()
+selenium.webdriver.support.ui.WebDriverWait(driver, 10).until(selenium.webdriver.support.expected_conditions.frame_to_be_available_and_switch_to_it((selenium.webdriver.common.by.By.CSS_SELECTOR, "iframe[title='recaptcha challenge']")))
+selenium.webdriver.support.ui.WebDriverWait(driver, 10).until(selenium.webdriver.support.expected_conditions.element_to_be_clickable((selenium.webdriver.common.by.By.CSS_SELECTOR, "button#recaptcha-audio-button"))).click()
 #driver.switch_to.frame(driver.find_elements_by_tag_name("iframe")[0])
 #selenium.webdriver.support.ui.WebDriverWait(driver, 100).until(selenium.webdriver.support.expected_conditions.element_to_be_clickable((selenium.webdriver.common.by.By.ID, "recaptcha-anchor")))
 #time.sleep(threading.TIMEOUT_MAX)
 time.sleep(20)
 pathlib.Path('index.html').write_text(driver.page_source)
-driver.save_screenshot('ha.png')
+driver.save_screenshot('ha.png')一
 driver.quit()
