@@ -15,8 +15,8 @@ for _ in driver.window_handles:
     driver.switch_to.window(_)
     if 'ebesucher' in driver.current_url: break
 driver.find_element_by_xpath('//*[text()="Surf now!"]/..').click()
-time.sleep(10)
-pathlib.Path('index.html').write_text(driver.page_source)
+driver.switch_to.frame(driver.find_elements_by_css_selector('iframe')[0])
+#pathlib.Path('index.html').write_text(driver.page_source)
 #time.sleep(threading.TIMEOUT_MAX)
 driver.save_screenshot('ha.png')
 driver.quit()
