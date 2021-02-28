@@ -23,6 +23,6 @@ selenium.webdriver.support.ui.WebDriverWait(driver, 10).until(selenium.webdriver
 #selenium.webdriver.support.ui.WebDriverWait(driver, 100).until(selenium.webdriver.support.expected_conditions.element_to_be_clickable((selenium.webdriver.common.by.By.ID, "recaptcha-anchor")))
 #time.sleep(threading.TIMEOUT_MAX)
 time.sleep(20)
-pathlib.Path('index.html').write_text(driver.page_source)
+pathlib.Path('index.html').write_text(driver.execute_script("return document.documentElement.outerHTML"))
 driver.save_screenshot('ha.png')
 driver.quit()
