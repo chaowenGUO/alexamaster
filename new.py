@@ -14,9 +14,9 @@ driver.execute_script('globalThis.open("http://www.ebesucher.com/surfbar/chaowen
 for _ in driver.window_handles:
     driver.switch_to.window(_)
     if 'ebesucher' in driver.current_url: break
-print(driver.page_source)
 driver.find_element_by_xpath('//*[text()="Surf now!"]/..').click()
 time.sleep(10)
+print(driver.page_source)
 #time.sleep(threading.TIMEOUT_MAX)
 driver.save_screenshot('ha.png')
 driver.quit()
