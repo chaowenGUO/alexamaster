@@ -1,4 +1,4 @@
-import selenium.webdriver, argparse, time, pathlib
+import selenium.webdriver, argparse, time, math
 parser = argparse.ArgumentParser() 
 parser.add_argument('password')
 options = selenium.webdriver.ChromeOptions()
@@ -25,5 +25,4 @@ for _ in driver.window_handles:
 #driver.find_element_by_css_selector('a[onClick^="return visio("]').click()
 time.sleep(math.inf)
 #driver.save_screenshot('ha.png')
-#pathlib.Path('ha.html').write_text(driver.page_source)
 #driver.quit()
