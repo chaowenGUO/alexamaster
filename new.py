@@ -14,10 +14,10 @@ for _ in driver.window_handles:
     driver.switch_to.window(_)
     if 'ebesucher' in driver.current_url: break
 selenium.webdriver.support.ui.WebDriverWait(driver, 10).until(selenium.webdriver.support.expected_conditions.element_to_be_clickable((selenium.webdriver.common.by.By.XPATH, '//*[text()="Surf now!"]/..'))).click()
+pathlib.Path('index.html').write_text(driver.page_source)
 selenium.webdriver.support.ui.WebDriverWait(driver, 10).until(selenium.webdriver.support.expected_conditions.frame_to_be_available_and_switch_to_it((selenium.webdriver.common.by.By.XPATH, '(//iframe)[1]')))
 #driver.switch_to.frame(driver.find_elements_by_tag_name("iframe")[0])
 #selenium.webdriver.support.ui.WebDriverWait(driver, 100).until(selenium.webdriver.support.expected_conditions.element_to_be_clickable((selenium.webdriver.common.by.By.ID, "recaptcha-anchor")))
-pathlib.Path('index.html').write_text(driver.page_source)
 #time.sleep(threading.TIMEOUT_MAX)
 time.sleep(10)
 driver.save_screenshot('ha.png')
