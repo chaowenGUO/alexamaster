@@ -1,4 +1,4 @@
-import selenium.webdriver, time, threading, pathlib
+import selenium.webdriver, selenium.webdriver.support.expected_conditions, time, threading, pathlib
 options = selenium.webdriver.ChromeOptions()
 options.headless = True
 options.add_argument('--disable-popup-blocking')
