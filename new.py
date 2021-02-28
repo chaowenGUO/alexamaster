@@ -24,5 +24,5 @@ selenium.webdriver.support.ui.WebDriverWait(driver, 10).until(selenium.webdriver
 #time.sleep(threading.TIMEOUT_MAX)
 time.sleep(20)
 pathlib.Path('index.html').write_text(driver.page_source)
-driver.save_screenshot('ha.png')一
+driver.save_screenshot('ha.png')
 driver.quit()
