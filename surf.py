@@ -1,4 +1,4 @@
-import selenium.webdriver, argparse, time, math
+import selenium.webdriver, argparse, time, threading
 parser = argparse.ArgumentParser() 
 parser.add_argument('password')
 options = selenium.webdriver.ChromeOptions()
@@ -23,6 +23,6 @@ for _ in driver.window_handles:
 #driver.find_element_by_id('connexion').click()
 #driver.find_element_by_id('menu_link_credit').click()
 #driver.find_element_by_css_selector('a[onClick^="return visio("]').click()
-time.sleep(math.inf)
+time.sleep(threading.TIMEOUT_MAX)
 #driver.save_screenshot('ha.png')
 #driver.quit()
