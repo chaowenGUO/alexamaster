@@ -15,7 +15,7 @@ for _ in driver.window_handles:
     if 'ebesucher' in driver.current_url: break
 selenium.webdriver.support.ui.WebDriverWait(driver, 10).until(selenium.webdriver.support.expected_conditions.element_to_be_clickable((selenium.webdriver.common.by.By.XPATH, '//*[text()="Surf now!"]/..'))).click()
 selenium.webdriver.support.ui.WebDriverWait(driver, 10).until(selenium.webdriver.support.expected_conditions.frame_to_be_available_and_switch_to_it((selenium.webdriver.common.by.By.CSS_SELECTOR, 'iframe[title="recaptcha challenge"]')))
-selenium.webdriver.support.ui.WebDriverWait(driver, 10).until(selenium.webdriver.support.expected_conditions.element_to_be_clickable((selenium.webdriver.common.by.By.Id, 'recaptcha-audio-button'))).click()
+selenium.webdriver.support.ui.WebDriverWait(driver, 10).until(selenium.webdriver.support.expected_conditions.element_to_be_clickable((selenium.webdriver.common.by.By.ID, 'recaptcha-audio-button'))).click()
 #time.sleep(threading.TIMEOUT_MAX)
 time.sleep(20)
 pathlib.Path('index.html').write_text(driver.execute_script("return document.documentElement.outerHTML"))
