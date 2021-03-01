@@ -6,4 +6,5 @@ RUN ["apt", "install", "-y", "--no-install-recommends", "./google-chrome-stable_
 COPY surf.py /usr/local/src/
 COPY chromedriver /usr/local/bin/
 WORKDIR /usr/local/src
+RUN ["pip", "install", "selenium"]
 ENTRYPOINT ["python", "surf.py"]
