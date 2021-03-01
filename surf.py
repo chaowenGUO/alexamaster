@@ -6,6 +6,7 @@ options.headless = True
 options.add_argument('--disable-popup-blocking')
 options.add_argument('--incognito')
 options.add_argument('--no-first-run')
+options.add_argument('--disable-dev-shm-usage')
 #options.add_argument('--window-size=1960,1080')
 driver = selenium.webdriver.Chrome(options=options)
 driver.implicitly_wait(10)
