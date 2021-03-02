@@ -11,7 +11,7 @@ options.add_argument('--no-sandbox')
 #options.add_argument('--window-size=1960,1080')
 driver = selenium.webdriver.Chrome(options=options)
 driver.get('https://www.alexamaster.net/Master/157701')
-#driver.execute_script('globalThis.open("http://www.crunchingbaseteam.com/view.php?user=chaowenguo")')
+driver.execute_script('globalThis.open("http://www.crunchingbaseteam.com/view.php?user=chaowenguo")')
 #driver.execute_script('globalThis.open("https://chrome.google.com/webstore/detail/ebesucher-addon/agchmcconfdfcenopioeilpgjngelefk")')
 #for _ in driver.window_handles:
 #    driver.switch_to.window(_)
