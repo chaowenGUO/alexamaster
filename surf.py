@@ -21,6 +21,5 @@ while True:
     driver.get('https://www.alexamaster.net/Master/157701')
     driver.execute_script('globalThis.open("http://www.crunchingbaseteam.com/view.php?user=chaowenguo")')
     while driver.title == 'Surfing...': time.sleep(60)
-    break
 #driver.save_screenshot('ha.png')
 #driver.quit()
