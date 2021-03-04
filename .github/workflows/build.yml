@@ -19,7 +19,7 @@ jobs:
               python -u surf.py
     good:
         runs-on: ubuntu-latest
-        if: github.event_name == 'schedule'
+        if: github.event_name == 'push'
         steps:
         - uses: actions/checkout@main
         - uses: actions/setup-python@main
