@@ -1,4 +1,4 @@
-import selenium.webdriver, time
+import selenium.webdriver, time, itertools
 options = selenium.webdriver.ChromeOptions()
 options.headless = True
 options.add_argument('--single-process')
@@ -20,7 +20,7 @@ driver.execute_script('globalThis.open("http://www.crunchingbaseteam.com/view.ph
 while True:
     time.sleep(600)
     #print(len(driver.window_handles))
-    for _ in driver.window_handles[2:]:
+    for _ in itertools.islice(driver.window_handles, 2, None):
         driver.switch_to.window(_)
         driver.close()
     driver.switch_to.window(driver.window_handles[0])
