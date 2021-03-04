@@ -16,7 +16,7 @@ jobs:
               python-version: '3.x'
         - run: |
               pip install selenium
-              python surf.py
+              python -u surf.py
     good:
         runs-on: ubuntu-latest
         if: github.event_name == 'push'
