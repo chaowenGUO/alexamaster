@@ -24,6 +24,6 @@ while True:
     print(driver.title)
     while driver.title == 'Surfing...': 
         time.sleep(60)
-        print(driver.title)
+        print(driver.title, len(driver.window_handles))
 #driver.save_screenshot('ha.png')
 #driver.quit()
