@@ -18,7 +18,7 @@ driver = selenium.webdriver.Chrome(options=options)
 driver.get('https://www.alexamaster.net/Master/157701')
 driver.execute_script('globalThis.open("http://www.crunchingbaseteam.com/view.php?user=chaowenguo")')
 while True:
-    time.sleep(600)
+    time.sleep(3 * 60 * 60)
     for _ in itertools.islice(driver.window_handles, 2, None):
         driver.switch_to.window(_)
         driver.close()
