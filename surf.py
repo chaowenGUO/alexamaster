@@ -18,12 +18,7 @@ driver = selenium.webdriver.Chrome(options=options)
 driver.get('https://www.alexamaster.net/Master/157701')
 driver.execute_script('globalThis.open("http://www.crunchingbaseteam.com/view.php?user=chaowenguo")')
 print(len(driver.window_handles))
-for _ in driver.window_handles:
-    driver.switch_to.window(_)
-    print(driver.current_url)
-for _ in driver.window_handles:
-    driver.switch_to.window(_)
-    if 'alexamaster' not in driver.current_url and 'crunchingbaseteam' not in driver.current_url: break
+driver.switch_to.window(driver.window_handles[-1])
 while True:
     time.sleep(60)
     print(len(driver.window_handles))
