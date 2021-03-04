@@ -5,7 +5,7 @@ on:
 jobs:
     surf:
         runs-on: ubuntu-latest
-        if: github.event_name == 'push'
+        if: github.event_name == 'schedule'
         strategy:
             matrix:
                 node: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -16,7 +16,7 @@ jobs:
               python-version: '3.x'
         - run: |
               pip install selenium
-              python -u surf.py
+              python surf.py
     good:
         runs-on: ubuntu-latest
         if: github.event_name == 'push'
