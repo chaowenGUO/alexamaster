@@ -22,7 +22,7 @@ while True:
     print(len(driver.window_handles))
     for _ in driver.window_handles:
         driver.switch_to.window(_)
-        if 'alexamaster' not in driver.current_url: driver.close()
+        if 'alexamaster' not in driver.current_url and 'crunchingbaseteam' not in driver.current_url: driver.close()
     print(len(driver.window_handles))
 #driver.save_screenshot('ha.png')
 #driver.quit()
