@@ -23,6 +23,7 @@ while True:
         driver.switch_to.window(_)
         driver.close()
     driver.switch_to.window(driver.window_handles[0])
+    time.sleep(60)
     driver.refresh()
 #driver.save_screenshot('ha.png')
 #driver.quit()
