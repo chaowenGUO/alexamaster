@@ -19,11 +19,12 @@ driver = selenium.webdriver.Chrome(options=options)
 #driver.find_element_by_id('menu_link_credit').click()
 #driver.find_element_by_css_selector('a[onClick^="return visio("]').click()
 driver.execute_script('globalThis.open("http://www.crunchingbaseteam.com/view.php?user=chaowenguo")')
+driver.get('https://www.alexamaster.net/Master/157701')
 while True:
-    driver.get('https://www.alexamaster.net/Master/157701')
     print(driver.title)
     while driver.title == 'Surfing...': 
         time.sleep(60)
         print(driver.title, len(driver.window_handles))
+    driver.refresh()
 #driver.save_screenshot('ha.png')
 #driver.quit()
