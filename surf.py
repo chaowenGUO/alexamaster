@@ -19,11 +19,11 @@ driver.get('https://www.alexamaster.net/Master/157701')
 driver.execute_script('globalThis.open("http://www.crunchingbaseteam.com/view.php?user=chaowenguo")')
 while True:
     time.sleep(600)
-    #print(len(driver.window_handles))
     for _ in itertools.islice(driver.window_handles, 2, None):
         driver.switch_to.window(_)
         driver.close()
     driver.switch_to.window(driver.window_handles[0])
-    #print(len(driver.window_handles))
+    time.sleep(10)
+    if driver.title == 'Surfing Stopped!': driver.switch_to.active_element.click()
 #driver.save_screenshot('ha.png')
 #driver.quit()
