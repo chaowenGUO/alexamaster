@@ -10,9 +10,6 @@ options.add_argument('--no-sandbox')
 #options.add_argument('--window-size=1960,1080')
 driver = selenium.webdriver.Chrome(options=options)
 #driver.execute_script('globalThis.open("https://chrome.google.com/webstore/detail/ebesucher-addon/agchmcconfdfcenopioeilpgjngelefk")')
-#for _ in driver.window_handles:
-#    driver.switch_to.window(_)
-#    if 'ebesucher' in driver.current_url: break
 #driver.find_element_by_id('connect_button').click()
 #driver.find_element_by_id('login_email').send_keys('c#driver.find_element_by_id('login_passwd').send_keys(parser.parse_args().password)
 #driver.find_element_by_id('connexion').click()
@@ -21,10 +18,11 @@ driver = selenium.webdriver.Chrome(options=options)
 driver.execute_script('globalThis.open("http://www.crunchingbaseteam.com/view.php?user=chaowenguo")')
 driver.get('https://www.alexamaster.net/Master/157701')
 while True:
-    print(driver.title)
-    while driver.title == 'Surfing...': 
-        time.sleep(60)
-        print(driver.title, len(driver.window_handles))
-    driver.refresh()
+    time.sleep(1800)
+    print(len(driver.window_handles))
+    for _ in driver.window_handles:
+        driver.switch_to.window(_)
+        if 'alexamaster' not in driver.current_url: driver.close()
+    print(len(driver.window_handles))
 #driver.save_screenshot('ha.png')
 #driver.quit()
