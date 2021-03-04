@@ -23,7 +23,6 @@ while True:
         driver.switch_to.window(_)
         driver.close()
     driver.switch_to.window(driver.window_handles[0])
-    time.sleep(20)
-    if driver.title == 'Surfing Stopped!': driver.switch_to.active_element.click()
+    driver.refresh()
 #driver.save_screenshot('ha.png')
 #driver.quit()
