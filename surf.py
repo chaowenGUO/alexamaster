@@ -20,6 +20,9 @@ driver.execute_script('globalThis.open("http://www.crunchingbaseteam.com/view.ph
 print(len(driver.window_handles))
 for _ in driver.window_handles:
     driver.switch_to.window(_)
+    print(driver.current_url)
+for _ in driver.window_handles:
+    driver.switch_to.window(_)
     if 'alexamaster' not in driver.current_url and 'crunchingbaseteam' not in driver.current_url: break
 while True:
     time.sleep(60)
