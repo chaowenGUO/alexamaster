@@ -1,7 +1,7 @@
 import selenium.webdriver, time
 options = selenium.webdriver.ChromeOptions()
 options.headless = True
-optionS.add_argument('--single-process')
+options.add_argument('--single-process')
 options.add_argument('--disable-popup-blocking')
 options.add_argument('--incognito')
 options.add_argument('--no-first-run')
