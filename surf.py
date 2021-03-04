@@ -15,8 +15,9 @@ driver = selenium.webdriver.Chrome(options=options)
 #driver.find_element_by_id('connexion').click()
 #driver.find_element_by_id('menu_link_credit').click()
 #driver.find_element_by_css_selector('a[onClick^="return visio("]').click()
-driver.execute_script('globalThis.open("http://www.crunchingbaseteam.com/view.php?user=chaowenguo")')
 driver.get('https://www.alexamaster.net/Master/157701')
+driver.execute_script('globalThis.open("http://www.crunchingbaseteam.com/view.php?user=chaowenguo")')
+print(len(driver.window_handles))
 for _ in driver.window_handles:
     driver.switch_to.window(_)
     if 'alexamaster' not in driver.current_url and 'crunchingbaseteam' not in driver.current_url: break
