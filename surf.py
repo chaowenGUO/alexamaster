@@ -17,12 +17,11 @@ driver = selenium.webdriver.Chrome(options=options)
 #driver.find_element_by_css_selector('a[onClick^="return visio("]').click()
 driver.execute_script('globalThis.open("http://www.crunchingbaseteam.com/view.php?user=chaowenguo")')
 driver.get('https://www.alexamaster.net/Master/157701')
+for _ in driver.window_handles:
+    driver.switch_to.window(_)
+    if 'alexamaster' not in driver.current_url and 'crunchingbaseteam' not in driver.current_url: break
 while True:
-    time.sleep(1800)
-    print(len(driver.window_handles))
-    for _ in driver.window_handles:
-        driver.switch_to.window(_)
-        if 'alexamaster' not in driver.current_url and 'crunchingbaseteam' not in driver.current_url: driver.close()
+    time.sleep(60)
     print(len(driver.window_handles))
 #driver.save_screenshot('ha.png')
 #driver.quit()
