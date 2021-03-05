@@ -13,16 +13,7 @@ async def f():
             print(len(context.pages), flush=True)
 asyncio.run(f())
 
-
-#import selenium.webdriver, time, itertools
-#options = selenium.webdriver.ChromeOptions()
-#options.headless = True
-#options.add_argument('--single-process')
-#options.add_argument('--disable-popup-blocking')
 #options.add_argument('--incognito')
-#options.add_argument('--no-first-run')
-#options.add_argument('--disable-dev-shm-usage')
-#options.add_argument('--no-sandbox')
 #options.add_argument('--window-size=1960,1080')
 #driver = selenium.webdriver.Chrome(options=options)
 #driver.execute_script('globalThis.open("https://chrome.google.com/webstore/detail/ebesucher-addon/agchmcconfdfcenopioeilpgjngelefk")')
