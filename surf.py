@@ -5,8 +5,8 @@ async def f():
         browser = await _.chromium.launch(executable_path='/usr/bin/google-chrome', args=['--incognito'])#default_args https://github.com/microsoft/playwright/blob/5faf6f9e69c2148e94c81675fb636eb31a02b5e7/src%2Fserver%2Fchromium%2Fchromium.ts#L78
         alexamaster = await browser.new_page()
         await alexamaster.goto('https://www.alexamaster.net/Master/157701')
-        crunchingbaseteam = await browser.new_page()
-        await crunchingbaseteam.goto('http://www.crunchingbaseteam.com/view.php?user=chaowenguo')
+        #crunchingbaseteam = await browser.new_page()
+        #await crunchingbaseteam.goto('http://www.crunchingbaseteam.com/view.php?user=chaowenguo')
         await asyncio.sleep(3 * 60 * 60)
 
 asyncio.run(f())
