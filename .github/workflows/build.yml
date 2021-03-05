@@ -15,7 +15,6 @@ jobs:
           with:
               python-version: '3.x'
         - run: |
-              which google-chrome
               pip install playwright
               python surf.py
     good:
