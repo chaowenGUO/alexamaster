@@ -1,6 +1,4 @@
-import asyncio, playwright.async_api, itertools, os
-
-os.environ['DEBUG'] = 'pw:api'
+import asyncio, playwright.async_api, itertools
 
 async def f():
     async with playwright.async_api.async_playwright() as _:
