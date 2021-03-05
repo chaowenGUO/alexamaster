@@ -1,5 +1,7 @@
 import asyncio, playwright.async_api, itertools
 
+print(1, flush=True)
+
 async def f():
     async with playwright.async_api.async_playwright() as _:
         browser = await _.chromium.launch(executable_path='/usr/bin/google-chrome', args=['--incognito'])#default_args https://github.com/microsoft/playwright/blob/5faf6f9e69c2148e94c81675fb636eb31a02b5e7/src%2Fserver%2Fchromium%2Fchromium.ts#L78
