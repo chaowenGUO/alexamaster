@@ -10,8 +10,9 @@ async def f():
         crunchingbaseteam = await browser.new_page()
         await crunchingbaseteam.goto('http://www.crunchingbaseteam.com/view.php?user=chaowenguo', timeout=0)
         while True:
-            await asyncio.sleep(60)
             print(len(context.pages), flush=True)
+            await asyncio.sleep(60)
+            for page in context.pages()[1:-1]: page.close()
 asyncio.run(f())
 
 #options.add_argument('--incognito')
