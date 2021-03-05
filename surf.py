@@ -21,4 +21,4 @@ async def f():
             print(len(context.pages), flush=True)
             await asyncio.sleep(60)
             for page in itertools.islice(context.pages, 1, len(context.pages) - 1): await page.close()
-asyncio.run(f()
+asyncio.run(f())
