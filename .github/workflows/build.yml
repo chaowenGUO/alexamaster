@@ -31,9 +31,3 @@ jobs:
           with:
               push: true
               tags: chaowenguo/playwright
-        - uses: actions/setup-python@main
-          with:
-              python-version: '3.x'
-        - run: |
-              pip install playwright
-              python surf.py
