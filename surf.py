@@ -7,7 +7,7 @@ async def f():
         print(2, flush=True)
         context = await browser.new_context()
         print(3, flush=True)
-        context.on('page', lambda page: await page.bring_to_front())
+        #context.on('page', lambda page: await page.bring_to_front())
         print(4, flush=True)
         alexamaster = await context.new_page()
         print(5, flush=True)
