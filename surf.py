@@ -4,8 +4,7 @@ async def main():
     async with playwright.async_api.async_playwright() as _:
         browser = await _.chromium.launch(executable_path='/usr/bin/google-chrome', args=['--disable-popup-blocking', '--incognito', '--no-first-run', '--disable-dev-shm-usage', '--no-sandbox'])
         page = await browser.new_page()
-        await page.goto('http://playwright.dev')
-        print(await page.title())
+        await page.goto('https://www.alexamaster.net/Master/157701')
         await browser.close()
 
 asyncio.run(main())
