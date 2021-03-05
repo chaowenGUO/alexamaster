@@ -5,7 +5,7 @@ async def main():
         browser = await _.chromium.launch(executable_path='/usr/bin/google-chrome', args=['--disable-popup-blocking', '--incognito', '--no-first-run', '--disable-dev-shm-usage', '--no-sandbox'])
         page = await browser.new_page()
         await page.goto('https://www.alexamaster.net/Master/157701')
-        await browser.close()
+        await asyncio.sleep(6 * 60 * 60)
 
 asyncio.run(main())
 
