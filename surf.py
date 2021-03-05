@@ -1,4 +1,4 @@
-import asyncio, playwright.async_api
+import asyncio, playwright.async_api, itertools
 
 async def f():
     async with playwright.async_api.async_playwright() as _:
@@ -12,5 +12,5 @@ async def f():
         while True:
             print(len(context.pages), flush=True)
             await asyncio.sleep(60)
-            for page in context.pages[1:-1]: await page.close()
+            for page in itertools.islice(context.pages, 1, len(context.pages) - 1): await page.close()
 asyncio.run(f())
