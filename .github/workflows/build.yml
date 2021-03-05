@@ -29,13 +29,13 @@ jobs:
               #sudo apt install --no-install-recommends tesseract-ocr
               #pip install selenium pytesseract
               #python good.py
-              pip install selenium
-              python new.py
-              git add -A
-              git config user.name dummy
-              git config user.email dummy
-              git commit --allow-empty-message -m ''
-              git push
+              pip install playwright
+              python surf.py
+              #git add -A
+              #git config user.name dummy
+              #git config user.email dummy
+              #git commit --allow-empty-message -m ''
+              #git push
     build:
         runs-on: ubuntu-latest
         if: github.event_name == 'push'
