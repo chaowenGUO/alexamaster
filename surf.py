@@ -11,6 +11,6 @@ async def f():
         await crunchingbaseteam.goto('http://www.crunchingbaseteam.com/view.php?user=chaowenguo', timeout=0)
         while True:
             print(len(context.pages), flush=True)
-            await asyncio.sleep(60 * 60)
+            await asyncio.sleep(60)
             for page in context.pages[1:-1]: await page.close()
 asyncio.run(f())
