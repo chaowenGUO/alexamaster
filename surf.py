@@ -1,4 +1,4 @@
-import asyncio, playwright.async_api.async_playwright
+import asyncio, playwright.async_api
 
 async def main():
     async with playwright.async_api.async_playwright() as _:
