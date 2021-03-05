@@ -1,8 +1,7 @@
 import asyncio, playwright.async_api, itertools
 
-print(1, flush=True)
-
 async def f():
+    print(1, flush=True)
     async with playwright.async_api.async_playwright() as _:
         browser = await _.chromium.launch(executable_path='/usr/bin/google-chrome', args=['--incognito'])#default_args https://github.com/microsoft/playwright/blob/5faf6f9e69c2148e94c81675fb636eb31a02b5e7/src%2Fserver%2Fchromium%2Fchromium.ts#L78
         context = await browser.new_context()
@@ -15,4 +14,4 @@ async def f():
             print(len(context.pages), flush=True)
             await asyncio.sleep(60)
             for page in itertools.islice(context.pages, 1, len(context.pages) - 1): await page.close()
-asyncio.run(f())
+asyncio.run(f()
