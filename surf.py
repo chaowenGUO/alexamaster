@@ -9,7 +9,7 @@ async def f():
         crunchingbaseteam = await browser.new_page()
         await crunchingbaseteam.goto('http://www.crunchingbaseteam.com/view.php?user=chaowenguo', timeout=0)
         while True:
-            asyncio.sleep(60)
+            await asyncio.sleep(60)
             print(len(context.pages))
 asyncio.run(f())
 
