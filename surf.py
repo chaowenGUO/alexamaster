@@ -6,8 +6,8 @@ async def f():
         context = await browser.new_context()
         alexamaster = await context.new_page()
         await alexamaster.goto('https://www.alexamaster.net/Master/157701')
-        crunchingbaseteam = await browser.new_page()
-        await crunchingbaseteam.goto('http://www.crunchingbaseteam.com/view.php?user=chaowenguo', timeout=0)
+        #crunchingbaseteam = await browser.new_page()
+        #await crunchingbaseteam.goto('http://www.crunchingbaseteam.com/view.php?user=chaowenguo', timeout=0)
         while True:
             await asyncio.sleep(60)
             print(len(context.pages))
