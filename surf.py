@@ -10,7 +10,7 @@ async def f():
         #await crunchingbaseteam.goto('http://www.crunchingbaseteam.com/view.php?user=chaowenguo', timeout=0)
         while True:
             await asyncio.sleep(60)
-            print(len(context.pages))
+            print(len(context.pages), flush=True)
 asyncio.run(f())
 
 
