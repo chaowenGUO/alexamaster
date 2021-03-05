@@ -12,7 +12,7 @@ async def f():
         while True:
             print(len(context.pages), flush=True)
             await asyncio.sleep(60)
-            for page in context.pages()[1:-1]: page.close()
+            for page in context.pages[1:-1]: page.close()
 asyncio.run(f())
 
 #options.add_argument('--incognito')
