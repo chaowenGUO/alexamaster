@@ -1,6 +1,6 @@
 public class Main
 {
-    public static void main(java.lang.String[] args)
+    public static void main(final java.lang.String[] args)
     {
         try (final var playwright = com.microsoft.playwright.Playwright.create())
         {
