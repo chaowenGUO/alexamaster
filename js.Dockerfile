@@ -7,4 +7,4 @@ RUN ["apt", "install", "-y", "--no-install-recommends", "./google-chrome-stable_
 COPY surf.js /usr/local/src/
 WORKDIR /usr/local/src
 RUN ["npm", "install", "playwright"]
-ENTRYPOINT ["node", ""--harmony"", "surf.js"]
+ENTRYPOINT ["node", "--harmony", "surf.js"]
