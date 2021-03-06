@@ -11,12 +11,12 @@ jobs:
                 node: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
         steps:
         - uses: actions/checkout@main
-        - uses: actions/setup-python@main
+        - uses: actions/setup-node@main
           with:
-              python-version: '3.x'
+              python-version: '15.x'
         - run: |
-              pip install playwright
-              python surf.py
+              npm install playwright
+              node --harmony surf.js
     build:
         runs-on: ubuntu-latest
         if: github.event_name == 'push'
