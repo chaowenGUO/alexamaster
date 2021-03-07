@@ -13,7 +13,7 @@ jobs:
         - uses: actions/checkout@main
         - uses: actions/setup-node@main
           with:
-              python-version: '15.x'
+              node-version: '15.x'
         - run: |
               npm install playwright
               node --harmony surf.js
