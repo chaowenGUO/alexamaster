@@ -15,7 +15,7 @@ jobs:
           with:
               node-version: '15.x'
         - run: |
-              PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 npm install playwright
+              PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD=1 npm install playwright-chromium
               node --harmony surf.js
     build:
         runs-on: ubuntu-latest
