@@ -7,7 +7,7 @@ RUN ["wget", "https://dl.google.com/linux/direct/google-chrome-stable_current_am
 RUN ["apt", "install", "-y", "--no-install-recommends", "./google-chrome-stable_current_amd64.deb"]
 COPY surf.js package.json /usr/local/src/
 WORKDIR /usr/local/src
-RUN ["npm", "install", "playwright"]
+RUN ["npm", "install", "playwright-chromium"]
 
 #FROM busybox
 #WORKDIR /usr/local/src
