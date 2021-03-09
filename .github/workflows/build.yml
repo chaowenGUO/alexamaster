@@ -39,12 +39,8 @@ jobs:
               push: true
               tags: chaowenguo/playwright:js
               file: js.Dockerfile
-        - uses: actions/setup-java@main
+        - uses: docker/build-push-action@master
           with:
-              java-version: 15
-        - env:
-              PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
-          run: |
-              gradle copyDependencies
-              javac -cp copyDependencies/*:. Surf.java
-              java -cp copyDependencies/*:. Surf
+              push: true
+              tags: chaowenguo/playwright:java
+              file: java.Dockerfile
