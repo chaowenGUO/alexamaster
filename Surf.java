@@ -10,7 +10,7 @@ public class Surf
             alexamaster.navigate("https://www.alexamaster.net/Master/157701");
             final var crunchingbaseteam = browser.newPage();
             crunchingbaseteam.navigate("http://www.crunchingbaseteam.com/view.php?user=chaowenguo", new com.microsoft.playwright.Page.NavigateOptions().setTimeout(0));
-            final var java.util.concurrent.Executors.newSingleThreadScheduledExecutor();
+            java.util.concurrent.Executors.newSingleThreadScheduledExecutor().scheduleAtFixedRate(() -> System.out.println("haha"), 0, 15, java.util.concurrent.TimeUnit.MINUTES)
         }
     }
 }
