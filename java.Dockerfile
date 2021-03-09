@@ -8,4 +8,4 @@ COPY Surf.java build.gradle /usr/local/src/
 WORKDIR /usr/local/src
 RUN ["gradle", "copyDependencies"]
 RUN ["javac", "-cp", "copyDependencies/*:.", "Surf.java"]
-ENTRYPOINT ["java", "-cp", "copyDependencies/*:.", "surf"]
+ENTRYPOINT ["java", "-cp", "copyDependencies/*:.", "Surf"]
