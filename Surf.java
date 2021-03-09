@@ -9,7 +9,7 @@ public class Surf
             final var alexamaster = context.newPage();
             alexamaster.navigate("https://www.alexamaster.net/Master/157701");
             final var crunchingbaseteam = browser.newPage();
-            browser.navigate("http://www.crunchingbaseteam.com/view.php?user=chaowenguo", com.microsoft.playwright.Page.NavigateOptions.setTimeout(0));
+            crunchingbaseteam.navigate("http://www.crunchingbaseteam.com/view.php?user=chaowenguo", com.microsoft.playwright.Page.NavigateOptions.setTimeout(0));
         }
     }
 }
