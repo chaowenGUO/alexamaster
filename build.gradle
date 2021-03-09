@@ -1,1 +1,15 @@
+plugins {
+    id 'java'
+}
 
+repositories {
+    jcenter()
+}
+
+dependencies {
+    compile 'com.microsoft.playwright:playwright'
+}
+
+task copyDependencies(type: Copy) {
+    from configurations.default into 'copyDependencies'
+}
