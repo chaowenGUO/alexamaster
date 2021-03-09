@@ -1,4 +1,4 @@
-public class Main
+public class Surf
 {
     public static void main(final java.lang.String[] args)
     {
