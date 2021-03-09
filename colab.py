@@ -1,8 +1,9 @@
 #%%bash
 #apt install chromium-browser
 #pip install playwright
-import asyncio, playwright.async_api, itertools, nest_asyncio
-nest_asyncio.apply()
+#git clone https://github.com/chaowenguoorg/alexamaster
+#python alexamaster/colab.py
+import asyncio, playwright.async_api, itertools
 
 async def f():
     async with playwright.async_api.async_playwright() as _:
