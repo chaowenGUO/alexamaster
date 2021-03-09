@@ -44,5 +44,5 @@ jobs:
               java-version: 15
         - run: |
               gradle copyDependencies
-              javac -cp copyDependencies/*:. Server.java
-              java -cp copyDependencies/*:. Server
+              javac -cp copyDependencies/*:. Surf.java
+              java -cp copyDependencies/*:. Surf
