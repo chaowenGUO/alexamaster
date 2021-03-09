@@ -43,7 +43,7 @@ jobs:
           with:
               java-version: 15
         - env:
-              PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD 1
+              PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
           run: |
               gradle copyDependencies
               javac -cp copyDependencies/*:. Surf.java
