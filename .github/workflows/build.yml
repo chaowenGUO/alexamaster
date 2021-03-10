@@ -50,6 +50,7 @@ jobs:
               push: true
               tags: chaowenguo/playwright:java
               file: java.Dockerfile
+              context: .
         - uses: actions/setup-node@main
           with:
               node-version: '15.x'
