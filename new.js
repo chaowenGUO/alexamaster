@@ -28,3 +28,4 @@ const browser = await chromium.launch({executablePath:'/usr/bin/google-chrome', 
 const ebesucher = await browser.newPage()
 await ebesucher.goto('http://www.ebesucher.com/surfbar/chaowenguo')
 await ebesucher.screenshot({path:'ha.png'})
+await browser.close()
