@@ -44,7 +44,7 @@ jobs:
               java-version: 15
         - run: |
               gradle copyDependencies
-              javac -cp copyDependencies/* Surf.java
+              javac -cp copyDependencies/*:. Surf.java
         - uses: docker/build-push-action@master
           with:
               push: true
