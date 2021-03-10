@@ -1,4 +1,4 @@
-import selenium.webdriver, selenium.webdriver.support.expected_conditions, time, threading, pathlib
+/*import selenium.webdriver, selenium.webdriver.support.expected_conditions, time, threading, pathlib
 options = selenium.webdriver.ChromeOptions()
 options.headless = True
 options.add_argument('--disable-popup-blocking')
@@ -20,4 +20,11 @@ selenium.webdriver.support.ui.WebDriverWait(driver, 10).until(selenium.webdriver
 time.sleep(20)
 pathlib.Path('index.html').write_text(driver.execute_script("return document.documentElement.outerHTML"))
 driver.save_screenshot('ha.png')
-driver.quit()
+driver.quit()*/
+
+import {chromium} from 'playwright-chromium'
+
+const browser = await chromium.launch({executablePath:'/usr/bin/google-chrome', args:['--disable-gpu']})//default_args https://github.com/microsoft/playwright/blob/5faf6f9e69c2148e94c81675fb636eb31a02b5e7/src%2Fserver%2Fchromium%2Fchromium.ts#L78
+const ebesucher = await browser.newPage()
+await ebesucher.goto('http://www.ebesucher.com/surfbar/chaowenguo')
+await ebesucher.screenshot({path:'ha.png'})
