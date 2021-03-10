@@ -11,5 +11,5 @@ dependencies {
 }
 
 task copyDependencies(type: Copy) {
-    from configurations.default into 'copyDependencies'
+    from configurations.default into '.'
 }
