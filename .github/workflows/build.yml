@@ -39,6 +39,7 @@ jobs:
               push: true
               tags: chaowenguo/playwright:js
               file: js.Dockerfile
+        - run: java Version.java
         - uses: actions/setup-java@main
           with:
               java-version: 15
