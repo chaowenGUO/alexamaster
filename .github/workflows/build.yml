@@ -61,7 +61,7 @@ jobs:
         - run : |
               python -m venv --copies venv
               ls venv
-              ldd venv/python
+              ldd venv/bin/python
         - uses: actions/setup-node@main
           with:
               node-version: 15.x
