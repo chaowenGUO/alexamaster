@@ -39,6 +39,9 @@ jobs:
               push: true
               tags: chaowenguo/playwright:js
               file: js.Dockerfile
+        - uses: actions/setup-java@main
+          with:
+              java-version: 15
         - run: java Version.java
         - uses: actions/setup-java@main
           with:
@@ -52,6 +55,13 @@ jobs:
               tags: chaowenguo/playwright:java
               file: java.Dockerfile
               context: .
+        - uses: actions/setup-python@main
+          with:
+              python-version: 3.x
+        - run : |
+              python -m venv --copies /usr/local/src/venv
+              ls /usr/local/src/venv
+              ldd /usr/local/src/
         - uses: actions/setup-node@main
           with:
               node-version: '15.x'
