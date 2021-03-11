@@ -18,7 +18,7 @@ jobs:
               PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
           run: |
               npm install playwright-chromium
-              node --harmony surf.js
+              node --harmony js/surf.js
     build:
         runs-on: ubuntu-latest
         if: github.event_name == 'push'
