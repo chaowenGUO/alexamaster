@@ -47,21 +47,21 @@ jobs:
           with:
               java-version: ${{env.JAVA}}
         - run: |
+              cd java
               gradle copyDependencies
               javac -cp copyDependencies/*:. Surf.java
         - uses: docker/build-push-action@master
           with:
               push: true
               tags: chaowenguo/playwright:java
-              file: java.Dockerfile
-              context: .
+              context: java
         - uses: actions/setup-python@main
           with:
               python-version: 3.x
         - run : |
-              python -m venv --copies /usr/local/src/venv
-              ls /usr/local/src/venv
-              ldd /usr/local/src/
+              python -m venv --copies venv
+              ls venv
+              ldd venv/python
         - uses: actions/setup-node@main
           with:
               node-version: 15.x
