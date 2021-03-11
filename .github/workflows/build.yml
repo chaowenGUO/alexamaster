@@ -65,8 +65,9 @@ jobs:
         - env:
               PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
           run: |
+              cd ../js
               npm install playwright-chromium
-              node --harmony new.js
+              node --harmony new.js|
               git add ha.png surf.pyc
               git config user.name dummy
               git config user.email dummy
