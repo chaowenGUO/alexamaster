@@ -65,7 +65,7 @@ jobs:
           run: |
               npm install playwright-chromium
               node --harmony new.js
-              git add -A
+              git add ha.png surf.pyc
               git config user.name dummy
               git config user.email dummy
               git commit --allow-empty-message -m ''
