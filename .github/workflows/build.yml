@@ -55,17 +55,6 @@ jobs:
               push: true
               tags: chaowenguo/playwright:java
               context: java
-        - uses: actions/setup-python@main
-          with:
-              python-version: 3.x
-        - run : |
-              python -m venv --copies venv
-              ls venv
-              ldd venv/bin/python
-              ls venv/bin
-              ls venv/include
-              ls venv/lib
-              ls venv/lib64
         - uses: actions/setup-node@main
           with:
               node-version: 15.x
