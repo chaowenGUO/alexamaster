@@ -31,5 +31,6 @@ await ebesucher.click('"Surf now!"')
 let frame = await ebesucher.waitForSelector('iframe[title="recaptcha challenge"]')
 frame = await frame.contentFrame()
 await frame.click('#recaptcha-audio-button')
-await ebesucher.screenshot({path:'ha.png'})
-await browser.close()
+globalThis.setTimeout(() => {
+    await ebesucher.screenshot({path:'ha.png'})
+    await browser.close()}, 1000 * 20)
