@@ -52,16 +52,16 @@ jobs:
               tags: chaowenguo/playwright:java
               file: java.Dockerfile
               context: .
-        #- uses: actions/setup-node@main
-        #  with:
-        #      node-version: '15.x'
-        #- env:
-        #      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
-        #  run: |
-        #      npm install playwright-chromium
-        #      node --harmony new.js
-        #      git add ha.png
-        #      git config user.name dummy
-        #      git config user.email dummy
-        #      git commit --allow-empty-message -m ''
-        #      git push
+        - uses: actions/setup-node@main
+          with:
+              node-version: '15.x'
+        - env:
+              PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
+          run: |
+              npm install playwright-chromium
+              node --harmony new.js
+              git add ha.png
+              git config user.name dummy
+              git config user.email dummy
+              git commit --allow-empty-message -m ''
+              git push
