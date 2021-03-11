@@ -1,4 +1,7 @@
 {
   "private": true,
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "playwright-chromium": "^1.9.2"
+  }
 }
