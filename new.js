@@ -28,8 +28,8 @@ const browser = await chromium.launch({executablePath:'/usr/bin/google-chrome', 
 const ebesucher = await browser.newPage()
 await ebesucher.goto('http://www.ebesucher.com/surfbar/chaowenguo')
 await ebesucher.click('"Surf now!"')
-await ebesucher.waitForSelector('iframe[title="recaptcha challenge"]')
 let frame = 'iframe[title="recaptcha challenge"]'
+await ebesucher.waitForSelector(frame)
 frame = await ebesucher.$(frame)
 frame = await frame.contentFrame()
 await frame.click('#recaptcha-audio-button')
