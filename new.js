@@ -2,7 +2,7 @@ import {chromium} from 'playwright-chromium'
 
 const browser = await chromium.launch({executablePath:'/usr/bin/google-chrome', args:['--disable-gpu']})//default_args https://github.com/microsoft/playwright/blob/5faf6f9e69c2148e94c81675fb636eb31a02b5e7/src%2Fserver%2Fchromium%2Fchromium.ts#L78
 const context = await browser.newContext()
-await context.addCookies([{name:'SESSIONID', value:'5fe481e951b0e5acf7c5073d934c7d6e', domain:'www.ebesucher.com', path:'/'}])
+await context.addCookies([{name:'device', value:'jc7VYKQxoMWrzY7095d3Ir', domain:'www.ebesucher.com', path:'/'}, {name:'logincheck', value:'7060124223151', domain:'www.ebesucher.com', path:'/'}])
 const ebesucher = await browser.newPage()
 await ebesucher.goto('http://www.ebesucher.com/surfbar/chaowenguo')
 /*await ebesucher.click('span:text-is("Surf now!")') 
