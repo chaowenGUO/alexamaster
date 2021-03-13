@@ -69,6 +69,7 @@ jobs:
               heroku_email: chaowen.guo1@gmail.com
               usedocker: true
               appdir: js
+              docker_heroku_process_type: worker
     bu:
         runs-on: ubuntu-latest
         if: github.event_name == 'push'
