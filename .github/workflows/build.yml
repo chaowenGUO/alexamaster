@@ -66,7 +66,7 @@ jobs:
         - uses: akhileshns/heroku-deploy@master
           with:
               heroku_api_key: ${{secrets.HEROKU}}
-              heroku_app_name: playwright
+              heroku_app_name: playwrightt
               heroku_email: chaowen.guo1@gmail.com
               usedocker: true
     bu:
