@@ -1,4 +1,7 @@
 import http from 'http'
 import process from 'process'
-import './surf.js'
-http.createServer().listen(process.env.PORT)
+http.createServer((req, res) =>
+{
+    res.write('Hello World!')
+    res.end()
+}).listen(process.env.PORT)
