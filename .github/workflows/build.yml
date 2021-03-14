@@ -22,7 +22,7 @@ jobs:
               node --harmony js/surf.js
     heroku:
         runs-on: ubuntu-latest
-        if: github.event_name == 'schedule' && github.event.schedule == '*/15 * * * *'
+        if: github.event_name == 'schedule' && github.event.schedule == '*/20 * * * *'
         steps:
         - uses: actions/checkout@main
         - uses: akhileshns/heroku-deploy@master
