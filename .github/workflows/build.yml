@@ -2,10 +2,11 @@ on:
     push:
     schedule:
     - cron: '0 */6 * * *'
+    - cron: '*/30 * * * *'
 jobs:
-    surf:
+    github:
         runs-on: ubuntu-latest
-        if: github.event_name == 'schedule'
+        if: github.event_name == 'schedule' && github.event.schedule == '0 */6 * * *' 
         strategy:
             matrix:
                 node: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -19,7 +20,18 @@ jobs:
           run: |
               npm install --prefix js playwright-chromium
               node --harmony js/surf.js
-    build:
+    heroku:
+        runs-on: ubuntu-latest
+        if: github.event_name == 'schedule' && github.event.schedule == '*/30 * * * *'
+        steps:
+        - uses: actions/checkout@main
+        - uses: akhileshns/heroku-deploy@master
+          with:
+              heroku_api_key: ${{secrets.HEROKU}}
+              heroku_app_name: playwrightt
+              heroku_email: chaowen.guo1@gmail.com
+              usedocker: true
+    docker:
         runs-on: ubuntu-latest
         if: github.event_name != 'push' && github.event_name != 'schedule'
         steps:
@@ -62,13 +74,7 @@ jobs:
               push: true
               tags: chaowenguo/playwright:java
               context: java
-        - uses: akhileshns/heroku-deploy@master
-          with:
-              heroku_api_key: ${{secrets.HEROKU}}
-              heroku_app_name: playwrightt
-              heroku_email: chaowen.guo1@gmail.com
-              usedocker: true
-    bu:
+    build:
         runs-on: ubuntu-latest
         if: github.event_name == 'push'
         steps:
