@@ -15,5 +15,5 @@ spec:
             - image: playwright
               resources:
                   limits:
-                  memory: 512Mi
+                      memory: 512Mi
               name: playwright
