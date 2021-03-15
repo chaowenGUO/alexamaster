@@ -14,6 +14,6 @@ spec:
             containers:
             - image: playwright
               resources:
-                  limits:
-                      memory: 512Mi
+                  cpu: 500m
+                  memory: 512Mi
               name: playwright
