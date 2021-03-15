@@ -1,4 +1,0 @@
-apiVersion: beta/v1
-deploy:                               
-    docker:                             
-        file: js/Dockerfile
