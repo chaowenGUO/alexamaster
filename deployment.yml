@@ -15,6 +15,5 @@ spec:
             - image: playwright
               resources:
                   limits:
-                      cpu: 200m
                       memory: 512Mi
               name: playwright
