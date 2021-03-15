@@ -3,6 +3,7 @@ kind: Config
 build:
     artifacts:
     - image: playwright
+      context: js
 deploy:
     kubectl:
         manifests:
