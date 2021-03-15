@@ -2,7 +2,7 @@ apiVersion: skaffold/v1
 kind: Config
 build:
     artifacts:
-    - image: chaowenguo/playwright
+    - image: playwright
       context: js
 deploy:
     kubectl:
