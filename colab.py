@@ -1,4 +1,5 @@
 #%%bash
+#apt update
 #apt install chromium-browser
 #pip install playwright
 #git clone git://github.com/chaowenguoorg/alexamaster
