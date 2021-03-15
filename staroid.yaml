@@ -1,0 +1,4 @@
+apiVersion: beta/v1
+build:
+    skaffold:
+        file: skaffold.yaml
