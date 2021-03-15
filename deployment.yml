@@ -1,1 +1,16 @@
-
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+    name: playwright
+spec:
+    selector:
+        matchLabels:
+            app: playwright
+    template:
+        metadata:
+            labels:
+                app: playwright
+        spec:
+            containers:
+            - image: playwright
+              name: playwright
