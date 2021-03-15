@@ -1,6 +1,3 @@
 apiVersion: beta/v1
 deploy:
-    skaffold: {}
-ingress:
-    - serviceName: docs
-      port: 8000
+    file: skaffold.yaml
