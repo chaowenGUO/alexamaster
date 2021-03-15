@@ -2,11 +2,11 @@ on:
     push:
     schedule:
     - cron: '0 */6 * * *'
-    - cron: '*/20 * * * *'
+    - cron: '*/30 * * * *'
 jobs:
     github:
         runs-on: ubuntu-latest
-        if: github.event_name == 'schedule' && github.event.schedule == '0 */6 * * *' 
+        if: github.event.schedule == '0 */6 * * *' 
         strategy:
             matrix:
                 node: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
@@ -22,7 +22,7 @@ jobs:
               node --harmony js/surf.js
     heroku:
         runs-on: ubuntu-latest
-        if: github.event_name == 'schedule' && github.event.schedule == '*/20 * * * *'
+        if: github.event.schedule == '*/30 * * * *'
         steps:
         - uses: actions/checkout@main
         - uses: akhileshns/heroku-deploy@master
