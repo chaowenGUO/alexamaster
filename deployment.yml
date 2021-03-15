@@ -12,5 +12,5 @@ spec:
                 app: playwright
         spec:
             containers:
-            - image: playwright
+            - image: chaowenguo/playwright
               name: playwright
