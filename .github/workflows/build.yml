@@ -2,7 +2,7 @@ on:
     push:
     schedule:
     - cron: '0 */6 * * *'
-    #- cron: '*/30 * * * *'
+    - cron: '0 */8 * * *'
 jobs:
     github:
         runs-on: ubuntu-latest
