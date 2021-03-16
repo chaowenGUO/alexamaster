@@ -1,9 +1,9 @@
 apiVersion: skaffold/v1
 kind: Config
-#build:
-#    artifacts:
-#    - image: playwright
-#      context: js
+build:
+    artifacts:
+    - image: playwright
+      context: js
 deploy:
     kubectl:
         manifests:
