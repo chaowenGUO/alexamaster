@@ -32,8 +32,8 @@ jobs:
               KAGGLE_USERNAME: chaowenguo
               KAGGLE_KEY: ${{secrets.KAGGLE}}
           run: |
-              pip install kernel
-              kaggle kernels --list
+              pip install kaggle
+              kaggle kernels push
     #heroku:
         #runs-on: ubuntu-latest
         #if: github.event.schedule == '*/30 * * * *'
