@@ -11,6 +11,9 @@ spec:
             labels:
                 app: playwright
         spec:
+            securityContext:
+                runAsUser: 2000
             containers:
             - image: playwright
               name: playwright
+ 
