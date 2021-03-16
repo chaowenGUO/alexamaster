@@ -1,6 +1,6 @@
 #%%bash
 #apt update
-#apt install chromium-browser
+#apt install -y chromium-browser
 #pip install playwright
 #git clone git://github.com/chaowenguoorg/alexamaster
 #python alexamaster/colab.py
