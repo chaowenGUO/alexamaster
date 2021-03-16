@@ -33,7 +33,7 @@ jobs:
               KAGGLE_KEY: ${{secrets.KAGGLE}}
           run: |
               pip install kaggle
-              kaggle kernels list
+              kaggle kernels list --user chaowenguo
     #heroku:
         #runs-on: ubuntu-latest
         #if: github.event.schedule == '*/30 * * * *'
