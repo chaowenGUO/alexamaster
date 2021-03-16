@@ -86,7 +86,7 @@ jobs:
               PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
           run: |
               npm install playwright-chromium
-              node --harmony new.js
+              node --harmony heroku.js
               git add ha.png
               git config user.name dummy
               git config user.email dummy
