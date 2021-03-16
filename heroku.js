@@ -4,5 +4,6 @@ const browser = await chromium.launch({executablePath:'/usr/bin/google-chrome', 
 const staroid = await browser.newPage()
 await staroid.goto('https://staroid.com/g/chaowenGUOorg/alexamaster/release')
 await staroid.click('span:text-is("Sign in with Github")')
+await staroid.fill('#login_field', 'chaowen.guo1@gmail.com')
 await staroid.screenshot({path:'ha.png'})
 await browser.close()
