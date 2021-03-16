@@ -13,7 +13,4 @@ spec:
         spec:
             containers:
             - image: playwright
-              resources:
-                  limits:
-                      memory: 512Mi
               name: playwright
