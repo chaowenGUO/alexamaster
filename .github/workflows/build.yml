@@ -23,6 +23,9 @@ jobs:
     kaggle:
         runs-on: ubuntu-latest
         if: github.event_name == 'push'
+        strategy:
+            matrix:
+                node: [0, 0, 0]
         steps:
         - uses: actions/checkout@main
         - uses: actions/setup-python@main
