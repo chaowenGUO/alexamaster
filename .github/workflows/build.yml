@@ -33,13 +33,7 @@ jobs:
               KAGGLE_KEY: ${{secrets.KAGGLE}}
           run: |
               pip install kaggle
-              kaggle kernels init
-              #kaggle kernels push
-              git add kernel-metadata.json
-              git config user.name dummy
-              git config user.email dummy
-              git commit --allow-empty-message -m ''
-              git push
+              kaggle kernels push
     #heroku:
         #runs-on: ubuntu-latest
         #if: github.event.schedule == '*/30 * * * *'
