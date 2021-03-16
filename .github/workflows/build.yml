@@ -20,14 +20,22 @@ jobs:
           run: |
               npm install --prefix js playwright-chromium
               node --harmony js/surf.js
+    kaggle:
+        runs-on: ubuntu-latest
+        if: github.event_name == 'push'
+        steps:
+        - uses: actions/checkout@main
+        - uses: actions/setup-python@main
+          with:
+              python-version: 3.x
+        - run: |
+              pip install kaggle
+              kaggle -h
     #heroku:
         #runs-on: ubuntu-latest
         #if: github.event.schedule == '*/30 * * * *'
         #steps:
-        #- uses: actions/checkout@main
-        #- uses: akhileshns/heroku-deploy@master
-        #  with:
-        #      heroku_api_key: ${{secrets.HEROKU}}
+        #- uses: actions/chesecrets.HEROKU}}
         #      heroku_app_name: playwrightt
         #      heroku_email: chaowen.guo1@gmail.com
         #      usedocker: true
