@@ -36,7 +36,7 @@ jobs:
               KAGGLE_KEY: ${{secrets.KAGGLE}}
           run: |
               pip install kaggle
-              sed -i 's/VERSION/${{matrix.version}}/g' kernel-metadata.json 
+              python kernel-metadata.py ${{matrix.version}} 
               kaggle kernels push
     #heroku:
         #runs-on: ubuntu-latest
