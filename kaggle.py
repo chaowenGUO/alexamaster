@@ -10,6 +10,6 @@ async def f():
     #await asyncio.create_subprocess_exec('python', 'alexamaster/py/surf.py')
     #await asyncio.sleep(8 * 60 * 60)
     #sys.exit()
-    print(1, flush=True)
+    await asyncio.create_subprocess_exec('apt', 'install', '-y', '--no-install-recommends', './google-chrome-stable_current_amd64.deb')
 
 asyncio.run(f())
