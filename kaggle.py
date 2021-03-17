@@ -10,7 +10,7 @@ async def f():
     #await asyncio.create_subprocess_exec('python', 'alexamaster/py/surf.py')
     #await asyncio.sleep(8 * 60 * 60)
     #sys.exit()
-    chrome.wait()
+    await chrome.wait()
     process =  await asyncio.create_subprocess_exec('google-chrome', '--version', stdout=asyncio.subprocess.PIPE)
     stdout, _ = await process.communicate()
     print(stdout, flush=True),
