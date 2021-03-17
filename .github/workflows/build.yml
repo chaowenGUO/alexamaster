@@ -3,6 +3,7 @@ on:
     schedule:
     - cron: '0 */6 * * *'
     - cron: '0 */8 * * *'
+    - cron: '0 */12 * * *'
 jobs:
     github:
         runs-on: ubuntu-latest
@@ -35,6 +36,18 @@ jobs:
               KAGGLE_USERNAME: chaowenguo
               KAGGLE_KEY: ${{secrets.KAGGLE}}
           run: |
+              pip install kaggle
+              python kernel-metadata.py ${{matrix.version}} 
+              kaggle kernels push
+    colab:
+        runs-on: ubuntu-latest
+        if: github.event.schedule == '0 */12 * * *'
+        steps:
+        - uses: actions/checkout@main
+        - uses: actions/setup-node@main
+          with:
+              node-version: 15.x
+        - run: |
               pip install kaggle
               python kernel-metadata.py ${{matrix.version}} 
               kaggle kernels push
