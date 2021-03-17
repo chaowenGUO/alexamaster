@@ -5,7 +5,7 @@ const context = await browser.newContext()
 for (const _ of Array(5).keys())
 {
     const page = await context.newPage()
-    await page.goto('https://colab.research.google.com/github/chaowenGUOorg/alexamaster/blob/main/colab.ipynb')
+    await page.goto(['https://colab.research.google.com/github/chaowenGUOorg/alexamaster/blob/main/colab', _, '.ipynb'].join(''))
     await page.keyboard.press('Control+F9')
 }
 await browser.close()
