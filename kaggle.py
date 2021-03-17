@@ -11,4 +11,4 @@ async def f():
     await asyncio.sleep(8 * 60 * 60)
     sys.exit()
 
-await f()
+asyncio.run(f())
