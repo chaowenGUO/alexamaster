@@ -1,9 +1,9 @@
 {
   "id": "chaowenguo/alexamasterVERSION",
   "title": "alexamasterVERSION",
-  "code_file": "kaggle.ipynb",
+  "code_file": "kaggle.py",
   "language": "python",
-  "kernel_type": "notebook",
+  "kernel_type": "script",
   "is_private": "true",
   "enable_gpu": "false",
   "enable_internet": "true",
