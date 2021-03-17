@@ -9,6 +9,6 @@ async def f():
     await asyncio.create_subprocess_exec('git', 'clone', 'git://github.com/chaowenguoorg/alexamaster')
     await asyncio.create_subprocess_exec('python', 'alexamaster/py/surf.py')
     await asyncio.sleep(8 * 60 * 60)
+    sys.exit()
 
-asyncio.run(f())
-sys.exit()
+await f()
