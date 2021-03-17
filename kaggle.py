@@ -1,4 +1,4 @@
-import aiohttp, pathlib, asyncio, sys
+import aiohttp, pathlib, asyncio
 
 async def f():
     async with aiohttp.ClientSession() as session:
